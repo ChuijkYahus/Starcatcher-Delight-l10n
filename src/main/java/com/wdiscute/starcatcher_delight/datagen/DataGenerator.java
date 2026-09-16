@@ -22,7 +22,7 @@ public class DataGenerator {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         gen.addProvider(event.includeServer(), new DGItemModelProvider(output, helper));
-        gen.addProvider(event.includeServer(), new DGRecipeProvider(output, lookupProvider));
+        gen.addProvider(event.includeServer(), new DGSDRecipeProvider(output, lookupProvider));
 
         BlockTagsProvider blockTagsProvider = new DGBlockTagsProvider(output, lookupProvider, helper);
         gen.addProvider(event.includeServer(), blockTagsProvider);

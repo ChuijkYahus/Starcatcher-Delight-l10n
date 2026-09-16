@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "starcatcher:cactifish"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "tag": "c:crops/lettuce"
+    },
+    {
+      "item": "kaleidoscope_cookery:caterpillar"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:cactifish_stew"
+  }
+}

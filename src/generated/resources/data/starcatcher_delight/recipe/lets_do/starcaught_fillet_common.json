@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farm_and_charm"
+    }
+  ],
+  "type": "farm_and_charm:mincer",
+  "ingredient": {
+    "tag": "starcatcher:common_starcaught_fishes"
+  },
+  "recipe_type": "MEAT",
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:starcaught_fillet_common"
+  }
+}

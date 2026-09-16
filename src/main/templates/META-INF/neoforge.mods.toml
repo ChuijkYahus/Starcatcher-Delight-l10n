@@ -40,16 +40,8 @@ Art:
     side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="farmersdelight"
-type="required"
-versionRange="${farmersdelight_version}"
-ordering="NONE"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
 modId="starcatcher"
 type="required"
-versionRange="${starcatcher_version}"
 ordering="NONE"
 side="BOTH"
 

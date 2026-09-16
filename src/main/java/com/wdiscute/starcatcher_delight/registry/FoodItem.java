@@ -18,23 +18,23 @@ public class FoodItem extends Item
     final Rarity rarity;
 
     //special food constructor
-    public FoodItem(SDNutrition fp)
+    public FoodItem(Properties p, SDNutrition fp)
     {
-        super(new Properties().food(fp.build()));
+        super(p.food(fp.build()));
         this.onEat = fp.onEat;
         this.rarity = Rarity.NONE;
     }
 
     //generic food constructor
-    public FoodItem(SDNutrition fp, Rarity rarity)
+    public FoodItem(Properties p, SDNutrition fp, Rarity rarity)
     {
-        super(new Properties().food(fp.build()));
+        super(p.food(fp.build()));
         this.onEat = fp.onEat;
         this.rarity = rarity;
     }
 
     //generic food constructor helper
-    public static FoodItem generic(Rarity rarity, SDNutrition nut)
+    public static FoodItem generic(Properties p, Rarity rarity, SDNutrition nut)
     {
         if (rarity.equals(Rarity.COMMON))
         {
@@ -67,7 +67,7 @@ public class FoodItem extends Item
             nut.effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 6000, 4), 1.0F);
         }
 
-        return new FoodItem(nut, rarity);
+        return new FoodItem(p, nut, rarity);
     }
 
 

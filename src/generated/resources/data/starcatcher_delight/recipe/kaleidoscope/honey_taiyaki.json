@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "tag": "c:dough"
+    },
+    {
+      "tag": "starcatcher:starcaught_fishable_fish"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:honey_taiyaki"
+  }
+}

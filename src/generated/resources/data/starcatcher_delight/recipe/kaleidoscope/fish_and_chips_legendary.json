@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "starcatcher_delight:starcaught_fillet_legendary"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:fish_and_chips_legendary"
+  }
+}

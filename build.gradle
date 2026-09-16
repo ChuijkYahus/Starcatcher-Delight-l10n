@@ -38,20 +38,29 @@ repositories {
 dependencies {
 
     //farmer's delight
-    implementation("maven.modrinth:farmers-delight:${farmersdelight_version}")
+    compileOnly("maven.modrinth:farmers-delight:1.21.1-1.3.2")
+
+    //kaleidoscope cookery
+    compileOnly("maven.modrinth:kaleidoscope-cookery:1.4.1-neoforge+mc1.21.1")
+
+    //lets's do farm & charm - 1.1.23
+    implementation("maven.modrinth:lets-do-farm-charm:DlXdACqc")
 
     //starcatcher
-    implementation("maven.modrinth:starcatcher:${starcatcher_version}")
+    implementation("maven.modrinth:starcatcher:3.1.4.1-NEOFORGE-1.21.1")
 
     //libtooltips
     compileOnly("maven.modrinth:libtooltips:2.3.1-NEOFORGE-1.21.1")
 
     //fancy tab sections
-    compileOnly("maven.modrinth:fancytabsections:5.0-NEOFORGE-1.21.1")
+    compileOnly("maven.modrinth:fancytabsections:6.2-NEOFORGE-1.21.1")
 
     //wdUtils
-    compileOnly("com.wdiscute:wdUtils:1.2-NEOFORGE-1.21.1")
+    compileOnly("com.wdiscute:wdUtils:2.0-NEOFORGE-1.21.1")
 
+    //architectury
+    compileOnly("maven.modrinth:architectury-api:13.0.11+neoforge")
+    runtimeOnly("maven.modrinth:architectury-api:13.0.11+neoforge")
 
     //implementation files(".compatmods/starcatcher-2.2-PREVIEW-NEOFORGE-1.21.1.jar")
 
@@ -59,10 +68,10 @@ dependencies {
     //runtimeOnly("dev.emi:emi-neoforge:${emi_version}")
 
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
-    //runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    runtimeOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
     compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
-    runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
+    //runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
 }
 
 base {
@@ -173,9 +182,6 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_license            : mod_license,
             mod_version            : mod_version,
             mod_authors            : mod_authors,
-
-            farmersdelight_version : farmersdelight_version,
-            starcatcher_version    : starcatcher_version
     ]
     inputs.properties replaceProperties
     expand replaceProperties

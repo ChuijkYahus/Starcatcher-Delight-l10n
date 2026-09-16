@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "starcatcher:redscaled_tuna"
+    },
+    {
+      "tag": "c:crops/lettuce"
+    },
+    {
+      "tag": "c:crops/lettuce"
+    },
+    {
+      "tag": "c:crops/chilipepper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:steamed_redscaled_tuna"
+  }
+}

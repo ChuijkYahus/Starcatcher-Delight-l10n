@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "starcatcher_delight:starcaught_fillet_legendary"
+    },
+    {
+      "tag": "c:crops/rice"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "starcatcher_delight:nigiri_legendary"
+  }
+}

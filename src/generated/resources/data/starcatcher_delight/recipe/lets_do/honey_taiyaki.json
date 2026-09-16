@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farm_and_charm"
+    }
+  ],
+  "type": "farm_and_charm:pot_cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "tag": "c:dough"
+    },
+    {
+      "tag": "starcatcher:starcaught_fishable_fish"
+    }
+  ],
+  "requireContainer": false,
+  "requiresLearning": false,
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:honey_taiyaki"
+  }
+}

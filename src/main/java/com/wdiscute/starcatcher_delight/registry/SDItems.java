@@ -29,7 +29,7 @@ public interface SDItems
     DeferredItem<Item> STEAMED_REDSCALED_TUNA = specialFood("steamed_redscaled_tuna", SDNutrition.STEAMED_REDSCALED_TUNA);
     DeferredItem<Item> GRILLED_SHROOMFISH = specialFood("grilled_shroomfish", SDNutrition.GRILLED_SHROOMFISH);
     DeferredItem<Item> SPORE_NIGIRI = specialFood("spore_nigiri", SDNutrition.SPORE_NIGIRI);
-    DeferredItem<Item> WEATHER_SOUP = specialFood("weather_soup", SDNutrition.WEATHER_SOUP);
+    DeferredItem<Item> WEATHER_SOUP = specialFood("weather_soup", SDNutrition.WEATHER_SOUP, 16);
 
 
     //taiyaki
@@ -55,21 +55,24 @@ public interface SDItems
 
     private static DeferredItem<Item> specialFood(String name, SDNutrition nut)
     {
-        return SPECIAL_FOODS.register(name, () -> new FoodItem(nut));
+        return specialFood(name, nut, 64);
+    }
+
+    private static DeferredItem<Item> specialFood(String name, SDNutrition nut, int stacksTo)
+    {
+        return SPECIAL_FOODS.registerItem(name, (p) -> new FoodItem(p.stacksTo(stacksTo), nut));
     }
 
     private static StarcatcherGenericFood genericFood(String name, SDNutrition nut)
     {
         List<DeferredItem<Item>> list = new ArrayList<>();
 
-        list.add(GENERIC_FOODS.register(name, () -> FoodItem.generic(Rarity.NONE, nut)));
-        list.add(COMMON_FOODS.register(name + "_common", () -> FoodItem.generic(Rarity.COMMON, nut)));
-        list.add(UNCOMMON_FOODS.register(name + "_uncommon", () -> FoodItem.generic(Rarity.UNCOMMON, nut)));
-        list.add(RARE_FOODS.register(name + "_rare", () -> FoodItem.generic(Rarity.RARE, nut)));
-        list.add(EPIC_FOODS.register(name + "_epic", () -> FoodItem.generic(Rarity.EPIC, nut)));
-        list.add(LEGENDARY_FOODS.register(name + "_legendary", () -> FoodItem.generic(Rarity.LEGENDARY, nut)));
+        list.add(COMMON_FOODS.registerItem(name + "_common", (p) -> FoodItem.generic(p, Rarity.COMMON, nut)));
+        list.add(UNCOMMON_FOODS.registerItem(name + "_uncommon", (p) -> FoodItem.generic(p, Rarity.UNCOMMON, nut)));
+        list.add(RARE_FOODS.registerItem(name + "_rare", (p) -> FoodItem.generic(p, Rarity.RARE, nut)));
+        list.add(EPIC_FOODS.registerItem(name + "_epic", (p) -> FoodItem.generic(p, Rarity.EPIC, nut)));
+        list.add(LEGENDARY_FOODS.registerItem(name + "_legendary", (p) -> FoodItem.generic(p, Rarity.LEGENDARY, nut)));
 
         return new StarcatcherGenericFood(list);
     }
-
 }

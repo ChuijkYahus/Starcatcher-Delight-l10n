@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "starcatcher:shroomfish"
+    },
+    {
+      "tag": "c:crops/lettuce"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:grilled_shroomfish"
+  }
+}

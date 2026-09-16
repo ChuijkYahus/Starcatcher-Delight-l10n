@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "tag": "starcatcher:worms"
+    },
+    {
+      "item": "starcatcher:magma_fish"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "tag": "c:dough"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:magma_fish_balls"
+  }
+}

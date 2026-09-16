@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_cookery"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "starcatcher_delight:starcaught_fillet_uncommon"
+    },
+    {
+      "tag": "c:crops/lettuce"
+    },
+    {
+      "tag": "c:crops/tomato"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "starcatcher_delight:healthy_fish_omelette_uncommon"
+  }
+}
